@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Auth system</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-image: url("https://lakezurichopenmri.com/wp-content/uploads/2024/06/MRI-and-Artificial-Intelligence-The-Future-of-Diagnostics.jpg");          
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .header {
+            margin-top: 20px; /* Adjust as needed */ 
+        }
+        .auth-container {
+            text-align: center;
+            padding: 60px;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 100px;
+        }
+        a.btn {
+            margin-bottom: 10px;
+        }
+        .article-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #f4f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 80px;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .highlight {
+            color: #007bff; /* Blue highlight color */
+            font-weight: bold;
+        }
+        .card-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+        .card{
+            width: 325px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+        .card img{
+            width: 100%;
+            height: auto;
+        }
+        .card-content{
+            padding: 16px;
+        }
+        .card-content{
+            font-size: 14px;
+            margin-bottom: 8;
+        }
+        .card-content .btn{
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 16px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1 align="center">RadioGraphy</h1>  
+    </div>
+    
+    <div class="auth-container">
+        <a href="/register" class="btn btn-primary">Signup</a>
+        <a href="/login" class="btn btn-dark">Login</a>
+    </div>
+    <div class="article-container">
+        <h2>Welcome to Our Platform</h2>
+        <p>Welcome to Radiography Tech, our AI-powered platform is transforming radiology, delivering real-time, accurate x-ray analysis to help you diagnose and treat patients with unparalleled accuracy and efficiency.
+            Designed to integrate seamlessly into your workflow, Radiography Tech uses advanced machine learning to identify dental, brain, and lung diseases – enabling you to make informed decisions faster than ever before.</p>
+        <p></p>
+        <ul>
+            <li>Why choose Radiography Tech?</li>
+            <p>Ultra-fast diagnoses: Speed ​​up patient consultations with near-instant results.
+                Improved diagnostic confidence: Leverage machine learning to reduce errors and improve outcomes.
+                Patient-centric care: Boost satisfaction with faster, more accurate care at no additional cost.</p>
+            <li>Features:</li>
+            <p>Intelligent AI for x-ray analysis.
+                Our advanced AI technology delivers unparalleled efficiency and accuracy in x-ray imaging, redefining patient care.</p>
+            <li>Key features:</li>
+            <p>Real-time detection
+                Identify cavities, root fractures, abscesses, and other abnormalities in seconds.
+                Get instant insights to accelerate treatment planning.</p>
+            <li>Comprehensive Reporting:</li>
+            <p>Create detailed, illustrated x-ray reports that highlight problem areas for easy review.
+                Include actionable insights to improve patient communication and streamline clinical workflow.</p>
+        </ul>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStfIOjN6V87CC8-DFLl_SxNUqY-CO2dpjx9w&s">
+                <div class="card-content">
+                    <h3>Dental</h3>
+                    <p>Dental X-ray analysis to detect</p>
+                    <li>Caries (tooth decay)</li>
+                        Early and advanced stages of tooth decay.
+                    <li>Gum disease</li>
+                        Detect bone loss and gum disease.
+                    <li>Root infections (periapical lesions)</li>
+                        Identify infections in the tooth root.
+                    <li>Fractured or cracked teeth</li>
+                        Detect fractures or hairline fractures.
+                    <li>restoration problems</li>
+                        Identify problems with fillings, crowns or implants.
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.theengineer.co.uk/media/axvbcfke/06_brain-e1517395426627.jpg">
+                <div class="card-content">
+                    <h3>Brain</h3>
+                    <p>Due to the difficulty of the matter, our application:</p>
+                    <li>analyzes the integrity of the brain</li>
+                    <li>or the presence of a tumor in it</li>
+                    <li>through models of nerve cells for machine learning trained to examine the brain.</li>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN1nfwj4b9fQK5fli2KfIMzqfeia7Dpzy_lQ&s">
+                <div class="card-content">
+                    <h3>Lungs</h3>
+                    <p>Application that has the ability to identify diseases such as:</p>
+                    <li>Lung cancer</li>
+                    <li>Pneumonia</li>
+                    <li>Tuberculosis</li>
+                    <li>Chronic obstructive pulmonary disease</li>
+                    <li>Pulmonary embolism</li>
+                    <li>Covid-19 or viral pneumonia</li>
+                    <li>Pleural effusion</li>
+                    <li>Pneumothorax</li>
+                    <li>Interstitial lung disease</li>
+                    <li>Smoking-related diseases (emphysema)</li>
+                    <li>Fungal infection (aspergillosis)</li>
+                    <li>Heart-related conditions</li>
+
+                </div>
+            </div>
+</body>
+</html>

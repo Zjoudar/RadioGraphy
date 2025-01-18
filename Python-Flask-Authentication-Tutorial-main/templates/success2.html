@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/styleSucc.css')}}>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Results Page</title>
+
+        <style type="text/css">
+            th{
+                text-align: center;
+                font-size: 20px;
+            }
+
+            td{
+                text-align: center;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Prediction Results</h1>
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% else %}
+            <ul>
+                <li>Class 1: {{ predictions["cClass1"] }}</li>
+                <li>Class 2: {{ predictions["cClass2"] }}</li>
+                <li>Class 3: {{ predictions["cClass3"] }}</li>
+            </ul>
+        {% endif %}
+    </body>
+</html>
