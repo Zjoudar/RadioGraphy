@@ -12,8 +12,8 @@ import numpy as np
 
 app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-#model = load_model(os.path.join(BASE_DIR , 'finnalproject_Apps.h5'))
-model = load_model(r'C:\Users\user\Downloads\Dataset\Python-Flask-Authentication-Tutorial-main\finnalproject_Apps.h5')
+model = load_model(os.path.join(BASE_DIR , 'finnalproject_Apps.h5'))
+#model = load_model(r'C:\Users\user\Downloads\Dataset\Python-Flask-Authentication-Tutorial-main\finnalproject_Apps.h5')
 ALLOWED_EXT = set(['jpg' , 'jpeg' , 'png' , 'jfif'])
 def allowed_file(filename):
     return '.' in filename and \
@@ -24,9 +24,9 @@ classes = ['Degenerative Infectious Disease','Encapsulated Lesions','Higher Dens
           'Normal Anatomy','Obstructive Pulmonary Diseases','Pneumonia','Tuberculosis', 'Cavity', 'Fillings', 'Periodontitis', 'bone loss', 'decay', 'fractured', 'glioma_tumor', 'meningioma_tumor', 'no_tumor', 'pituitary_tumor']
 
 def predict(filename , model):
-    img = load_img(filename , target_size = (224 , 224))
+    img = load_img(filename , target_size = (32 , 32))
     img = img_to_array(img)
-    img = img.reshape(1 , 224 ,224 ,3)
+    img = img.reshape(1 , 32 ,32 ,3)
 
     img = img.astype('float32')
     img = img/255.0
@@ -41,13 +41,11 @@ def predict(filename , model):
     res = res[::-1]
     prob = res[:3]
 
-    prob_result = []
     class_result = []
-    for i in range(3):
-        prob_result.append((prob[i]*100).round(2))
+    for i in range(1):
         class_result.append(dict_result[round(prob[i], 4)]) 
 
-    return class_result, prob_result
+    return class_result
 
 
 
@@ -142,15 +140,11 @@ def success():
                 output.close()
                 img = filename
 
-                class_result , prob_result = predict(img_path , model)
+                class_result  = predict(img_path , model)
 
                 predictions = {
-                      "class1":class_result[0],
-                        "class2":class_result[1],
-                        "class3":class_result[2],
-                        "prob1": prob_result[0],
-                        "prob2": prob_result[1],
-                        "prob3": prob_result[2],
+                      "class1":class_result[0]
+                       
                 }
 
             except Exception as e : 
